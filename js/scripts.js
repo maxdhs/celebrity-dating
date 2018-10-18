@@ -4,11 +4,14 @@ $(document).ready(function() {
     var age = $("#age").val();
     var bondActor = $("#bondActor").val();
     var fastFood = $("#fastFood").val();
+    if (age == "") {
+      alert("Please enter your age");
+    }
     if (bondActor === "Craig Daniels") {
       $("h1").hide();
       $('#output1').show();
     }
-    else if (fastFood === "Pizza") {
+    else if (fastFood === "Pizza" && bondActor === "Sean Connery") {
       $("h1").hide();
       $('#output2').show();
     }
